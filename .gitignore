@@ -1,0 +1,10 @@
+# Secrets: never commit
+.env
+*.env
+!.env.example
+api_keys*
+
+# Local junk
+debug.log
+__pycache__/
+*.pyc
