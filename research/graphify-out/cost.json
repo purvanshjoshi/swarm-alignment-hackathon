@@ -1,0 +1,20 @@
+{
+  "runs": [
+    {
+      "date": "2026-10-25T17:07:58.125157+00:00",
+      "input_tokens": 2655276,
+      "output_tokens": 0,
+      "files": 28,
+      "note": "subagent totals (no in/out split); includes one discarded partial re-run of chunk 16"
+    },
+    {
+      "date": "2026-10-26T16:37:16.828073+00:00",
+      "input_tokens": 224717,
+      "output_tokens": 0,
+      "files": 2,
+      "note": "--update: Troy Moment added, Agent Smith partial retried"
+    }
+  ],
+  "total_input_tokens": 2879993,
+  "total_output_tokens": 0
+}

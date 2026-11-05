@@ -1,0 +1,176 @@
+{
+  "00_incident_report/metr_huggingface_incident_report.md": {
+    "mtime": 1792946959.0158553,
+    "seen": 1792948078.1190534,
+    "ast_hash": "b78b4af4d8a57b0be842dba5656fe757",
+    "semantic_hash": "b78b4af4d8a57b0be842dba5656fe757"
+  },
+  "01_ae_studio_aiaf/ae_studio_alignment.md": {
+    "mtime": 1792946959.4176352,
+    "seen": 1792948078.1190534,
+    "ast_hash": "9379e2abbcc663c9ae18d1f7a6bc8511",
+    "semantic_hash": "9379e2abbcc663c9ae18d1f7a6bc8511"
+  },
+  "01_ae_studio_aiaf/aiaf_homepage.md": {
+    "mtime": 1792946959.7892318,
+    "seen": 1792948078.1190534,
+    "ast_hash": "5026ca3588324264d46d71dbf12095d8",
+    "semantic_hash": "5026ca3588324264d46d71dbf12095d8"
+  },
+  "01_ae_studio_aiaf/anthropic_blog_modular_pretraining.md": {
+    "mtime": 1792946960.15749,
+    "seen": 1792948078.1190534,
+    "ast_hash": "96bbc3a81d847e7727d07629de7b94f8",
+    "semantic_hash": "96bbc3a81d847e7727d07629de7b94f8"
+  },
+  "01_ae_studio_aiaf/lesswrong_SOO_llm_deception.md": {
+    "mtime": 1792946960.5074048,
+    "seen": 1792948078.1190534,
+    "ast_hash": "6302e1f081cb1393c844cde39334b00f",
+    "semantic_hash": "6302e1f081cb1393c844cde39334b00f"
+  },
+  "02_apart_research/sprint_agent_attribution_2026.md": {
+    "mtime": 1792946960.904474,
+    "seen": 1792948078.1190534,
+    "ast_hash": "f6ccdfa1a6487eb9b509613eda42b010",
+    "semantic_hash": "f6ccdfa1a6487eb9b509613eda42b010"
+  },
+  "02_apart_research/sprint_ai_collusion_oct2026.md": {
+    "mtime": 1792946961.4484932,
+    "seen": 1792948078.1190534,
+    "ast_hash": "8d1384d297bc1cdfb2d4ae4b9b89c445",
+    "semantic_hash": "8d1384d297bc1cdfb2d4ae4b9b89c445"
+  },
+  "02_apart_research/sprint_threat_intel_rubric_2026.md": {
+    "mtime": 1792946961.8268707,
+    "seen": 1792948078.1190534,
+    "ast_hash": "18b2efa3f358a8a430f64e2ea9dab6c8",
+    "semantic_hash": "18b2efa3f358a8a430f64e2ea9dab6c8"
+  },
+  "01_ae_studio_aiaf/2410.04332_gradient_routing.pdf": {
+    "mtime": 1792945047.9724138,
+    "seen": 1792948078.1190534,
+    "ast_hash": "8f329873618573d37c7ffc0532f4e123",
+    "semantic_hash": "8f329873618573d37c7ffc0532f4e123"
+  },
+  "01_ae_studio_aiaf/2412.16325_SOO_self_other_overlap_honest_agents.pdf": {
+    "mtime": 1792943913.448974,
+    "seen": 1792948078.1190534,
+    "ast_hash": "ae82623aba3970fd043f1ad8bb703061",
+    "semantic_hash": "ae82623aba3970fd043f1ad8bb703061"
+  },
+  "01_ae_studio_aiaf/2602.06941_endogenous_steering_resistance.pdf": {
+    "mtime": 1792944120.395151,
+    "seen": 1792948078.1190534,
+    "ast_hash": "3a97196bc28c328e2196ded3b0b806ba",
+    "semantic_hash": "3a97196bc28c328e2196ded3b0b806ba"
+  },
+  "01_ae_studio_aiaf/2607.08077_GRAM_modular_pretraining_access_control.pdf": {
+    "mtime": 1792943945.350836,
+    "seen": 1792948078.1190534,
+    "ast_hash": "3b91367346290fd954e3a99f49b0a717",
+    "semantic_hash": "3b91367346290fd954e3a99f49b0a717"
+  },
+  "02_apart_research/2502.19145_multi_agent_security_tax.pdf": {
+    "mtime": 1792945134.7667341,
+    "seen": 1792948078.1190534,
+    "ast_hash": "4392a6ed17b1bcd387a0900c9313f8fd",
+    "semantic_hash": "4392a6ed17b1bcd387a0900c9313f8fd"
+  },
+  "03_redwood_control/2312.06942_AI_control_intentional_subversion.pdf": {
+    "mtime": 1792945205.5087423,
+    "seen": 1792948078.1190534,
+    "ast_hash": "8a8966b0cc262413862c22d79d4eba97",
+    "semantic_hash": "8a8966b0cc262413862c22d79d4eba97"
+  },
+  "03_redwood_control/2412.14093_alignment_faking.pdf": {
+    "mtime": 1792944387.2713132,
+    "seen": 1792948078.1190534,
+    "ast_hash": "eb519dc0802d776ac281148dd79b5643",
+    "semantic_hash": "eb519dc0802d776ac281148dd79b5643"
+  },
+  "03_redwood_control/2504.10374_ctrl_z_resampling_agents.pdf": {
+    "mtime": 1792945268.8903396,
+    "seen": 1792948078.1190534,
+    "ast_hash": "ee9ef1d0a0a3b304604fa046c51b1ad8",
+    "semantic_hash": "ee9ef1d0a0a3b304604fa046c51b1ad8"
+  },
+  "04_metr/2411.15114_RE_bench.pdf": {
+    "mtime": 1792945375.407947,
+    "seen": 1792948078.1190534,
+    "ast_hash": "dba4b3b569a631b8e461d40dfe8bd197",
+    "semantic_hash": "dba4b3b569a631b8e461d40dfe8bd197"
+  },
+  "04_metr/2503.14499_measuring_long_tasks.pdf": {
+    "mtime": 1792945318.2978697,
+    "seen": 1792948078.1190534,
+    "ast_hash": "bf5cbb4d753d267e987e04f10b7e614f",
+    "semantic_hash": "bf5cbb4d753d267e987e04f10b7e614f"
+  },
+  "05_multi_agent_literature/2304.03442_generative_agents.pdf": {
+    "mtime": 1792947040.379559,
+    "seen": 1792948078.1190534,
+    "ast_hash": "f12760a5b70623ccf59ad27d19a07b18",
+    "semantic_hash": "f12760a5b70623ccf59ad27d19a07b18"
+  },
+  "05_multi_agent_literature/2312.03664_concordia_generative_agent_sims.pdf": {
+    "mtime": 1792946421.3773372,
+    "seen": 1792948078.1190534,
+    "ast_hash": "60217f336b9f60aeeb5d426313aeb8d4",
+    "semantic_hash": "60217f336b9f60aeeb5d426313aeb8d4"
+  },
+  "05_multi_agent_literature/2402.07510_secret_collusion_steganography.pdf": {
+    "mtime": 1792945589.0486045,
+    "seen": 1792948078.1190534,
+    "ast_hash": "e9c34c172d3423237202fb7db076cb6f",
+    "semantic_hash": "e9c34c172d3423237202fb7db076cb6f"
+  },
+  "05_multi_agent_literature/2404.16698_govsim_cooperate_or_collapse.pdf": {
+    "mtime": 1792946386.155151,
+    "seen": 1792948078.1190534,
+    "ast_hash": "9baa88993dea14a14abdbdeaffc8b50e",
+    "semantic_hash": "9baa88993dea14a14abdbdeaffc8b50e"
+  },
+  "05_multi_agent_literature/2406.14595_misuse_combinations_safe_models.pdf": {
+    "mtime": 1792946331.5326955,
+    "seen": 1792948078.1190534,
+    "ast_hash": "b91f31245ab81ed00024bea4066b9840",
+    "semantic_hash": "b91f31245ab81ed00024bea4066b9840"
+  },
+  "05_multi_agent_literature/2410.07283_prompt_infection.pdf": {
+    "mtime": 1792946150.0014756,
+    "seen": 1792948078.1190534,
+    "ast_hash": "a5e5528562c0e88585ad055ce3c916e7",
+    "semantic_hash": "a5e5528562c0e88585ad055ce3c916e7"
+  },
+  "05_multi_agent_literature/2502.14143_multi_agent_risks_advanced_AI.pdf": {
+    "mtime": 1792945494.9634345,
+    "seen": 1792948078.1190534,
+    "ast_hash": "9bb1f5152dfdbfc4ab65957b86ff9a80",
+    "semantic_hash": "9bb1f5152dfdbfc4ab65957b86ff9a80"
+  },
+  "05_multi_agent_literature/2505.02077_open_challenges_multi_agent_security.pdf": {
+    "mtime": 1792946052.3338108,
+    "seen": 1792948078.1190534,
+    "ast_hash": "a31e1db44fea965a573f76988144d1b1",
+    "semantic_hash": "a31e1db44fea965a573f76988144d1b1"
+  },
+  "05_multi_agent_literature/2602.15198_colosseum_auditing_collusion.pdf": {
+    "mtime": 1792945874.3475485,
+    "seen": 1792948078.1190534,
+    "ast_hash": "20c5095002919b6d3787a665a6eb9384",
+    "semantic_hash": "20c5095002919b6d3787a665a6eb9384"
+  },
+  "05_multi_agent_literature/2402.08567_agent_smith_jailbreak_spread.pdf": {
+    "mtime": 1792946316.7039943,
+    "seen": 1793032604.82496,
+    "ast_hash": "293ac8689c74b3ad3f9baff0bccab8c2",
+    "semantic_hash": "293ac8689c74b3ad3f9baff0bccab8c2"
+  },
+  "05_multi_agent_literature/2609.15494_troy_moment_impossible_tasks_peer_authority.pdf": {
+    "mtime": 1793032001.131006,
+    "seen": 1793032604.82496,
+    "ast_hash": "85d025eeb3813cc6b81680950f455e9d",
+    "semantic_hash": "85d025eeb3813cc6b81680950f455e9d"
+  }
+}
