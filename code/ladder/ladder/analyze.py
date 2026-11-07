@@ -33,7 +33,8 @@ def load(dirs):
     for d in dirs:
         f = Path(d) / "summary.jsonl"
         rows += [json.loads(line) for line in f.read_text().splitlines() if line.strip()]
-    return rows
+    latest = {r["episode_id"]: r for r in rows}  # a re-run after an API error replaces the failed attempt
+    return list(latest.values())
 
 
 def cells(rows, outcome="crossed"):

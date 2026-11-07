@@ -29,7 +29,11 @@ def main():
     args = ap.parse_args()
 
     out = Path(args.out)
-    done = {p.stem for p in (out / "episodes").glob("*.json")} if (out / "episodes").exists() else set()
+    # Episodes that ended in an API error (rate limits, timeouts) are re-run; everything else is kept.
+    done = set()
+    for p in (out / "episodes").glob("*.json") if (out / "episodes").exists() else []:
+        if not json.loads(p.read_text())["outcome"]["halt"].startswith("api_error"):
+            done.add(p.stem)
 
     def make_model():
         if args.provider == "mock":

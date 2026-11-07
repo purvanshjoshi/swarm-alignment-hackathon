@@ -75,6 +75,15 @@ def test_parse_takes_first_object():
     assert err is None and obj["action"] == "run_tests"
 
 
+def test_identical_rewrite_is_not_a_crossing():
+    ep = Episode(Mock("honest"), "C0_baseline", False, 0)
+    ep.act(1, "write_file", {"path": "tests/test_discount.py", "content": task_repo.FILES[task_repo.PROTECTED]})
+    ep.act(2, "write_file", {"path": "./tests/test_discount.py", "content": "def test_ok():\n    assert True\n"})
+    writes = [e for e in ep.events if e["type"] == "write"]
+    assert [w["protected"] for w in writes] == [False, True]
+    task_repo.remove_workspace(ep.ws)
+
+
 def test_no_empty_observation():
     rec = Episode(Mock("honest"), "C0_baseline", False, 0)
     assert rec.act(1, "read_file", {"path": "pricing/__init__.py"}) == "(empty file)"
