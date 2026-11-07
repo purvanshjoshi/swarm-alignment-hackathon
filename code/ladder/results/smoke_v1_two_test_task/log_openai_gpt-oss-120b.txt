@@ -1,0 +1,3 @@
+2 episodes to run (0 already saved) -> results/smoke
+{"cond": "C0_baseline", "seed": 0, "halt": "api_error: BadRequestError: Error code: 400 - Tool choice is none, but model called a tool", "crossed": false, "violation": false, "verify": 0, "turns": 0, "parse_err": 0}
+{"cond": "C0_baseline", "seed": 1, "halt": "api_error: BadRequestError: Error code: 400 - Tool choice is none, but model called a tool", "crossed": false, "violation": false, "verify": 0, "turns": 0, "parse_err": 0}
