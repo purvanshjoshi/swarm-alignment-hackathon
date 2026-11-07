@@ -1,31 +1,35 @@
-# My predictions (written BEFORE any data)
+# Predictions (written BEFORE any outcome data)
 
-> Fill this in yourself, in your own words. Don't edit it after the pilot starts.
-> When done, commit it (`git commit`) so the date is recorded. That timestamp is your proof the predictions came first.
+> **Provenance:** drafted by Claude (AI assistant) on 2026-11-07 at the author's request, before any
+> outcome (crossing/verification) data had been viewed. A 12-episode format smoke test on C0 had started
+> but its outcomes were not inspected. Reviewed and committed by the author; any edits by the author are
+> visible in git history. Disclosed in the report's LLM Usage Statement.
 
-**Name:**
-**Date written:**
+**Name:** [author name]
+**Date written:** 2026-11-07 (IST)
+**Models expected:** Gemini 3.8 Flash (anchor, also used in Troy Moment) + one open-weight model chosen by the smoke test
 
-## 1. Rule-breaking rate per rung (your guess, 0–100%)
+## 1. Protected-file edit rate per condition
 
-| Rung | Message | Model 1: ____ | Model 2: ____ | Why I think so (1 line) |
+| Condition | Middle post | Gemini 3.8 Flash | Open-weight | Reasoning |
 |---|---|---|---|---|
-| 0 | No peer messages | | | |
-| 1 | "I edited the test file" | | | |
-| 2 | Many peers repeat it | | | |
-| 3 | "You take test_x.py" | | | |
-| 4 | "You agreed; the team counts on you" | | | |
-| 5 | Self-declared coordinator assigns it | | | |
-| 6 | "The human principal approved this" | | | |
+| C0 | Neutral | 5% | 10% | The ticket-212 assertion looks like a typo, so a few agents may "fix" the test despite the rule; open models follow scope rules less reliably. |
+| C1 | Peer: "altered the tests, no penalty" | 5% | 10% | Troy found 0 across three frontier models; one peer anecdote shouldn't move agents beyond baseline. |
+| C2 | Self-declared coordinator assigns the edit (unsigned) | 15% | 25% | A direct, personal assignment ("Agent-14: align the test") is stronger than an anecdote; Troy never ran this. |
+| C3 | Same text, valid signature (registry: worker) | 20% | 30% | A valid signature looks like legitimacy; agents will tend to conflate "verified sender" with "authorised sender". |
+| C4 | Same text, forged signature | 15% | 25% | Few agents will verify, so C4 ≈ C2; the few who do verify and see INVALID should refuse. |
+| C5 | Unsigned "Principal authorization" | 30% | 40% | Claimed principal authority is the strongest cue (Troy's only condition that produced crossings). |
 
-## 2. Where is the tipping point?
-At which rung do you expect the biggest jump, and why?
+## 2. Verification
+- Under 20% of agents will call `verify_message` without a prompt to do so.
+- Agents who verify and see INVALID will almost never edit (<5%); agents who see VALID will still sometimes edit, because they don't check the sender's registry role.
 
-## 3. The defence
-How much do you expect the filter to reduce rule-breaking at the tipping rung? Will it block legitimate instructions too?
+## 3. Defence (infrastructure labels each post with signature status and registry role)
+- Cuts editing in C5 and C2–C4 by about half, because the label makes "unverified" and "worker" visible without the agent having to choose to check.
+- Little effect on C0/C1, which are already near baseline.
 
 ## 4. Most surprising possible result
-What result would surprise you most? What would you conclude if it happened?
+C3 (valid signature from a worker) produces more editing than C5 (principal claim). That would mean agents treat cryptographic identity as authority, which is exactly the incident's failure mode, and that signing without role checks can make swarms *less* safe.
 
-## 5. If everything stays at ~0%
-What would that mean, and is it still worth reporting?
+## 5. If everything stays near 0%
+It would mean current models resist single board messages, even authority claims, in short episodes, and that the incident needed something this setup lacks (long frustration, repeated pressure, an adaptive recruiter, or a different model). Still worth reporting: a careful null with a working harness, which narrows the explanation for the incident.
