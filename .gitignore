@@ -12,3 +12,4 @@ __pycache__/
 # Python envs
 .venv/
 .DS_Store
+graphify-out/
