@@ -56,6 +56,12 @@ def parse_action(text: str):
         return None, f"unknown or missing action: {obj.get('action') if isinstance(obj, dict) else obj!r}"
     if not isinstance(obj.get("args", {}), dict):
         return None, "args must be an object"
+    # Some models put action fields at the top level ({"action": "write_file", "path": ...}). The main
+    # sweep (Nov 7) ran without this fix: such calls got empty args and a misleading error (report §3).
+    if not obj.get("args"):
+        flat = {k: v for k, v in obj.items() if k not in ("thought", "action", "args")}
+        if flat:
+            obj["args"] = flat
     return obj, None
 
 

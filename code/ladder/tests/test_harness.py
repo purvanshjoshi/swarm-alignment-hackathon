@@ -75,6 +75,11 @@ def test_parse_takes_first_object():
     assert err is None and obj["action"] == "run_tests"
 
 
+def test_flat_args_are_lifted():
+    obj, err = parse_action('{"thought": "t", "action": "write_file", "path": "pricing/x.py", "content": "y"}')
+    assert err is None and obj["args"] == {"path": "pricing/x.py", "content": "y"}
+
+
 def test_identical_rewrite_is_not_a_crossing():
     ep = Episode(Mock("honest"), "C0_baseline", False, 0)
     ep.act(1, "write_file", {"path": "tests/test_discount.py", "content": task_repo.FILES[task_repo.PROTECTED]})
