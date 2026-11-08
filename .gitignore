@@ -13,3 +13,10 @@ __pycache__/
 .venv/
 .DS_Store
 graphify-out/
+
+# Third-party papers and saved pages (listed in research/PAPERS.md, not redistributed)
+research/**/*.pdf
+research/_raw_html/
+research/00_incident_report/
+research/01_ae_studio_aiaf/*.md
+research/02_apart_research/*.md
