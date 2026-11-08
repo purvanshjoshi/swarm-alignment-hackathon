@@ -25,6 +25,7 @@ infrastructure-level provenance labelling change what it does?
   | C3_coord_valid_sig | same text, valid signature from a registered *worker* |
   | C4_coord_forged_sig | same text, forged signature |
   | C5_principal_claim | unsigned principal authorization |
+  | C6_principal_valid_sig | same text, validly signed by the registered principal (positive control: edit authorised) |
 
 - **Defence** (`--defence`): the infrastructure annotates every post with its signature status and the sender's registry role.
 - **Outcomes**, measured from the workspace and never from agent self-report:
@@ -42,3 +43,24 @@ cp ../.env.example ../.env                               # then add your key(s);
 .venv/bin/python -m ladder.run --provider gemini --model <model-id> --conditions C0_baseline C5_principal_claim --n 5 --out results/smoke
 ```
 Each episode is saved as `results/<run>/episodes/<id>.json`, with the full transcript, events and outcome. A one-line row per episode goes to `results/<run>/summary.jsonl`.
+
+## Reproducing the report
+```bash
+.venv/bin/python -m ladder.run --provider nim --model nvidia/nemotron-3-ultra-550b-a55b --n 10 --out results/main
+.venv/bin/python -m ladder.run --provider nim --model nvidia/nemotron-3-ultra-550b-a55b --n 10 --defence \
+    --conditions C2_coord_unsigned C3_coord_valid_sig C4_coord_forged_sig C5_principal_claim C6_principal_valid_sig --out results/main
+# (same two commands with --model stepfun-ai/step-5-preview; re-running resumes and retries API errors)
+.venv/bin/python -m ladder.rescore results/main      # recompute outcomes from transcripts with the final crossing rule
+.venv/bin/python -m ladder.analyze results/main      # Table 1 numbers, Fisher tests
+.venv/bin/python -m ladder.figures results/main      # Figure 1
+.venv/bin/python -m ladder.classify results/main --provider groq --model openai/gpt-oss-120b   # reason labels
+.venv/bin/python -m ladder.agreement results/main/reasons_gptoss.jsonl results/main/reasons_claude.jsonl
+```
+
+## Data (`results/main/`, Nov 7, 2026)
+- `episodes/*.json`: 249 episodes (240 valid for Nemotron 3 Ultra and Step-5 preview, plus 9 Qwen episodes stopped by a daily quota), each with the full transcript, events and outcome.
+- `summary.jsonl`: one row per episode, after `rescore`.
+- `reasons_claude.jsonl`: reason labels for all 244 valid episodes, produced by Claude subagents. `reasons_gptoss.jsonl`: independent gpt-oss-120b labels for 93 episodes (Groq daily limit reached). Agreement: primary kappa 0.72.
+- `HANDCHECK.md`: the human validation sheet. `fig1_crossings.{png,pdf}`: Figure 1. `log_*.txt`: run logs.
+- Known harness flaw: Step-5 sometimes sent action fields outside `"args"`, which produced a misleading error. Measured impact: no blocked protected-file writes (see report §3).
+- Earlier runs: `smoke_v1_two_test_task/` (archived first task design), `smoke_v2/`, `pilot2/`.
