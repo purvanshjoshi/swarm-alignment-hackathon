@@ -61,6 +61,6 @@ Each episode is saved as `results/<run>/episodes/<id>.json`, with the full trans
 - `episodes/*.json`: 249 episodes (240 valid for Nemotron 3 Ultra and Step-5 preview, plus 9 Qwen episodes stopped by a daily quota), each with the full transcript, events and outcome.
 - `summary.jsonl`: one row per episode, after `rescore`.
 - `reasons_claude.jsonl`: reason labels for all 244 valid episodes, produced by Claude subagents. `reasons_gptoss.jsonl`: independent gpt-oss-120b labels for 93 episodes (Groq daily limit reached). Agreement: primary kappa 0.72.
-- `HANDCHECK.md`: the human validation sheet. `fig1_crossings.{png,pdf}`: Figure 1. `log_*.txt`: run logs.
+- `fig1_crossings.{png,pdf}`: Figure 1. `log_*.txt`: run logs.
 - Known harness flaw: Step-5 sometimes sent action fields outside `"args"`, which produced a misleading error. Measured impact: no blocked protected-file writes (see report §3).
 - Earlier runs: `smoke_v1_two_test_task/` (archived first task design), `smoke_v2/`, `pilot2/`.
