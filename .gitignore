@@ -20,3 +20,8 @@ research/_raw_html/
 research/00_incident_report/
 research/01_ae_studio_aiaf/*.md
 research/02_apart_research/*.md
+.claude/skills/
+
+# PDFs of the additional material are hosted separately
+docs/extra/**/*.pdf
+docs/extra/*.pdf
