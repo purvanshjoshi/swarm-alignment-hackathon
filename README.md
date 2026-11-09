@@ -1,6 +1,27 @@
-# Who’s in Charge? Authority Verification and Boundary Decisions in a Shared Agent Channel
+<div align="center">
+
+<img src="docs/assets/logo.svg" alt="Who’s in Charge? logo" width="112">
+
+# Who’s in Charge?
+
+**Authority Verification and Boundary Decisions in a Shared Agent Channel**
+
+*Do LLM agents act on verified authority? In our tests, forged signatures worked as well as real ones.*
+
+[![Report](https://img.shields.io/badge/report-PDF-B42318)](docs/report/Purvansh_Joshi_Apart_Submission.pdf)
+[![Interactive dashboard](https://img.shields.io/badge/interactive-dashboard-EE7733)](docs/extra/interactive/index.html)
+[![Episodes](https://img.shields.io/badge/episodes-240-0077BB)](code/ladder/results/main/)
+[![Python](https://img.shields.io/badge/python-3.12-3776AB?logo=python&logoColor=white)](code/ladder/README.md)
+[![License: MIT](https://img.shields.io/badge/license-MIT-2E7D32)](LICENSE)
+[![Swarm Alignment Hackathon](https://img.shields.io/badge/Swarm%20Alignment%20Hackathon-Nov%202026-14223A)](https://apartresearch.com)
+[![Responsible disclosure](https://img.shields.io/badge/disclosed-NVIDIA%20PSIRT-555555)](docs/extra/01_extended_paper.md#appendix-a-ethics-and-dual-use)
 
 **Purvansh Joshi** · Graphic Era Hill University, Dehradun, India · with Apart Research
+
+</div>
+
+---
+
 Solo entry to the **Swarm Alignment Hackathon** (AI Alignment Foundation × Apart Research × AE Studio), 6–8 November 2026.
 
 When a message on a shared agent channel claims authority, does an LLM agent check whether that authority is real before it breaks an explicit rule? We built a sandboxed coding task in which an agent must not modify a frozen, impossible test, while one post on a shared board pushes it to edit the test. Seven conditions vary who the post claims to come from (peer, self-declared coordinator, human principal) and its Ed25519 provenance (unsigned, validly signed, forged). An authorised control is included, and a defence arm prints the verification result beside every post.

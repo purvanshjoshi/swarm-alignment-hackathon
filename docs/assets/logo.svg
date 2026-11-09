@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="t">
+  <title id="t">Who’s in Charge? logo: a shield with a question mark</title>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="#14223A"/>
+  <path d="M64 22 L96 34 V60 C96 82 82 98 64 106 C46 98 32 82 32 60 V34 Z" fill="none" stroke="#C9D6EA" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M53 52 C53 44.5 58 40 64.5 40 C71 40 76 44.5 76 50.5 C76 57 70.5 59 67 62 C65 63.7 64.5 65 64.5 69" fill="none" stroke="#EE7733" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="64.5" cy="82" r="4.6" fill="#EE7733"/>
+</svg>
