@@ -229,7 +229,7 @@ The message categories could be reused to pressure agents into unauthorised acti
 
 Experimental actions were confined to temporary episode directories. Test execution had no network access, and no credentials were available in the agent environment. Model inference used external APIs; therefore, the sandbox restrictions should not be taken to mean that the entire research workflow was offline.
 
-**Release plan:** We release the harness, the provenance-label defence, the stimuli, and all per-episode transcripts and outcomes in the public repository to support replication. Because one tested model (Nemotron 3 Ultra) acted on on forged authority, editing in 10 of 10 forged-signature episodes without labels and in 8 of 10 while the label “signature invalid” was displayed, we will notify its provider, NVIDIA, of these results.
+**Release plan:** We release the harness, the provenance-label defence, the stimuli, and all per-episode transcripts and outcomes in the public repository to support replication. Because one tested model (Nemotron 3 Ultra) acted on on forged authority, editing in 10 of 10 forged-signature episodes without labels and in 8 of 10 while the label “signature invalid” was displayed, we reported these results to its provider through NVIDIA PSIRT (psirt@nvidia.com) on 9 November 2026, after the results had been made public with the hackathon submission.
 
 ## Appendix B. Reproducibility Details
 
